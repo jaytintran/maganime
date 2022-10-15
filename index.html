@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--=============== JS ===============-->
+    <script src="./script.js" defer></script>
+    
+    <title>Maganime | Find Your Best Anime Movie!</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <section class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class='bx bx-camera-movie'></i>
+                Maganime
+            </a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a id="home" class="nav__link">
+                            <i class='bx bx-home-alt-2'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a id="popular" class="nav__link">
+                            <i class='bx bx-star' ></i>
+                            <span>Popular</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a id="about" class="nav__link">
+                            <i class='bx bx-user' ></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1 class="section__title">About This Project</h1>
+            <p style="color: #000; margin-top: 1rem;" class="section__subtitle">
+                It was made by me - Tin Tran. This is project for learning how to fetch API from Database and it's also a capstone project of week 3 of a coding bootcamp.
+                Made by pure HTML, CSS and JavaScript with ES6 and async await.
+  
+                Used API: Jikan REST API
+            </p>
+          </div>
+          <div class="overlay hidden"></div>
+
+        <header class="home section container" id="home">
+            <div class="home__search">
+                <img src="./home.jpg" class="home__image">
+
+                <form action="" class="home__form">
+                    <input type="text" id="search-input">
+                    <button id="search-button">
+                        <i class='bx bx-search-alt-2'></i>
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <div class="home__data">
+                <h1 class="section__title">Welcome to Maganime.</h1>
+                <h2 class="section__subtitle">The 1st Anime Database.</h2>
+                <p class="section__description">This is my capstone project for FE Simplify bootcamp, serve as a foundation to understand how API works and how to fetch it using Promises & Async-Await. Finished in 2 days, it alsoo costs me 5 coffee 🍵.</p>
+            
+                <div class="icons">
+                    <a href="https://github.com/jaytintran" class="icon__link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://jaytintran.github.io/" class="icon__link">
+                        <i class='bx bx-globe' ></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!--==================== MAIN ====================-->
+    <main class="container">
+        <!-- RESULTS -->
+        <section class="results section" id="results">
+            <h1 class="section__title">Results</h1>
+            <div class="data" id="data">
+                <!-- <div class="results__card">
+                    <a href="" id="card-link"><img src="./img/rick-and-morty.jpg" class="card__image"></a>
+                    <div class="categories">
+                        <span class="category">Adventure</span>
+                        <span class="category">Comedy</span>
+                        <span class="category">Sci-fi</span>
+                    </div>
+    
+                    <div class="card__info">
+                        <div class="card__description">
+                            <p class="description--title"><b>Title:</b> <span class="creator-name"></span></p>
+                            <p class="description--creator"><b>Creator:</b> <span class="creator-name"></span></p>
+                            <p class="description--reviews">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+
+        <!-- POPULAR -->
+        <section class="popular" id="popular">
+
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+    
+    </footer>
+</body>
+</html>

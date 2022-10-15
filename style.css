@@ -1,0 +1,417 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(228, 66%, 53%);
+  --first-color-alt: hsl(228, 66%, 47%);
+  --first-color-light: hsl(228, 62%, 59%);
+  --first-color-lighten: hsl(228, 100%, 97%);
+  --second-color: hsl(25, 83%, 53%);
+  --title-color: hsl(4, 76%, 61%);
+  --text-color: hsl(228, 15%, 50%);
+  --text-color-light: hsl(228, 12%, 75%);
+  --border-color: hsl(228, 99%, 98%);
+  --body-color: #fff;
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+/*=============== THEME ===============*/
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+    Color changes in some parts of 
+    the website, in dark theme 
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+}
+
+.section__title span {
+  color: var(--second-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
+
+.section__description {
+    font-size: var(--smaller-font-size);
+}
+
+.main {
+  overflow: hidden; /* For the animations ScrollReveal*/
+}
+
+body {
+    color: var(--body-color);
+    background-color: #222;
+}
+
+/*=============== HEADER & NAV ===============*/
+.nav {
+    width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-medium);
+    color: #fff;
+}
+.nav__logo i {
+    font-size: 1.75rem;
+}
+.nav__logo:hover {
+    color: var(--title-color);
+}
+
+.nav__list {
+    display: flex;
+    gap: 1rem;
+}
+.nav__link {
+    color: var(--body-color);
+}
+.nav__link:hover {
+    color: var(--title-color);
+}
+
+/* Change background header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem !important;
+}
+
+.home__search {
+    width: 50%;
+}
+
+.home__data {
+    width: 50%;
+    padding: 1rem 2rem;
+}
+.home .icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.home .icons i {
+    color: white;
+    padding: .75rem;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+
+.home__search {
+    position: relative;
+    border-radius: 1.5rem;
+}
+.home__image {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+.home__form {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    width: 90%;
+    display: flex;
+}
+.home__form input {
+    padding: 1rem 2rem;
+    width: 80%;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+}
+.home__form button {
+    width: 30%;
+    background-color: var(--title-color);
+    color: #fff;
+    border-radius: 2rem;
+    transform: translateX(-80px);
+    cursor: pointer;
+}
+
+/*=============== RESULTS ===============*/
+.results {
+    padding-top: .25rem;
+}
+
+.results .section__title {
+    display: inline-block;
+    border-bottom: 2px solid var(--title-color);
+    margin-bottom: 2rem;
+}
+
+.data {
+    width: 100%;
+    display: grid;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.results__card {
+    width: 250px;
+    height: 550px;
+    background-color: rgb(31, 30, 30);
+    border-radius: .5rem;
+    transition: all .3s;
+}
+.results__card:hover {
+    transform: scale(1.05);
+}
+.results__card:active {
+    transform: scale(.98);
+}
+.card__image {
+    width: 100%;
+    max-width: 300px;
+}
+.categories {
+    display: flex;
+    gap: .25rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.category {
+    border: 1px solid var(--first-color);
+    border-radius: .5rem;
+    padding: .25rem;
+}
+.card__info {
+    padding: 1rem .5rem;
+}
+
+/*=============== ABOUT MODAL ===============*/
+.close-modal {
+	position: absolute;
+	top: 1.2rem;
+	right: 2rem;
+	font-size: 2rem;
+	color: #333;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+
+	background-color: white;
+	padding: 6rem;
+	border-radius: 5px;
+	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+	z-index: 10;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+
+/*=============== LOGOS ===============*/
+
+
+/*=============== POPULAR ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== VALUE ===============*/
+
+
+/*Rotate icon and add shadows*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== SUBSCRIBE ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 1028px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .home__search {
+        width: 100%;
+    }
+    .home__form {
+        width: 100%;
+    }
+    .home__image {
+        border-radius: 0;
+    }
+
+    .home__data {
+        display: none;
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+/* For 2K & 4K resolutions */
